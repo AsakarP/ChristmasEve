@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Eve</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+                $("button").fadeToggle("slow");
+            });
+
+            $("button").click(function () {
+                $("#text").slideToggle(2000);
+                $("#family").fadeToggle(3000);
+                $("#kids").fadeToggle(3000);
+                $("#friends").fadeToggle(3000);
+                $("table").fadeToggle(3000);
+            });
+        });
+    </script>
+    <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            border: solid 2px #FBFADF;
+            width: 70%;
+            margin: auto;
+            font-weight: bold;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+            border-radius: 10px;
+        }
+
+        #flip {
+            background-color: #AC0C0C;
+            background-image: linear-gradient(#AC0C0C, #ee4a4a);
+        }
+
+        #panel {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            display: none;
+            background-color: #A7D82E;
+            background-image: linear-gradient(#A7D82E, #e3ff9c);
+        }
+
+        body {
+            background-image: url('images/trees.jpg');
+            background-size: cover;
+            font-family: sans-serif;
+            font-size: larger;
+            color: white;
+        }
+
+        button {
+            background-image: linear-gradient(#F5F883, #fdffc8);
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: large;
+            font-family: sans-serif;
+            font-weight: bold;
+            display: none;
+            /* margin-left: 810px; */
+            margin: auto;
+            border-radius: 10px;
+            border: none;
+        }
+
+        #text {
+            display: none;
+            color: black;
+            font-size: larger;
+            text-align: center;
+            background-image: linear-gradient(#FBFADF, #fffdbb);
+            padding: 15px 32px;
+            width: 70%;
+            margin: auto;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        #family,
+        #kids,
+        #friends {
+            width: 100%;
+            border: solid 2px #FBFADF;
+            display: none;
+            /* margin-left: 40px; */
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            display: none;
+        }
+
+        td {
+            width: 800px;
+            text-align: center;
+            font-size: larger;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+        }
+
+        @media only screen and (min-width: 1000px) {
+
+            #family,
+            #kids,
+            #friends {
+                width: 30%;
+                border: solid 2px #FBFADF;
+                display: none;
+                margin-left: 20px;
+                margin-right: 20px;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flip">About Christmas Eve</div>
+    <div id="panel">Christmas Eve is the evening or entire day before Christmas Day, the festival commemorating the
+        birth of Jesus. Christmas Day is observed around the world, and Christmas Eve is widely observed as a full or
+        partial holiday in anticipation of Christmas Day. Together, both days are considered one of the most culturally
+        significant celebrations in Christendom and Western society.</div>
+    <br>
+    <button>Merry Christmas Eve!<br>(Click me!)</button>
+    <br>
+    <div id="text">Wish this Christmas Eve brings for you the gifts of happiness, good health & joy!</div>
+    <br>
+    <table>
+        <tr>
+            <td>Spend time with Friends and Family!</td>
+            <td></td>
+            <td>Lets get into the Festive Mood!</td>
+        </tr>
+    </table>
+    <img src="images/family.jpg" id="family">
+    <img src="images/kids.jpg" id="kids">
+    <img src="images/friends.jpg" id="friends">
+</body>
+
+</html>
